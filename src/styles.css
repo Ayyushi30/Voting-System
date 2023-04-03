@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: 0;
+}
+:root{
+    --primary-color:blue
+}
+body{
+    margin: 0;
+    font-family: quicksand, sans-serif;
+}
+a{
+    text-decoration: none;
+}

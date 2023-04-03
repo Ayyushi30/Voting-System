@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">e-voting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto" style="float: right; margin-top: 10px;" >
+        <li class="nav-item active">
+          <p class="nav-link" href="#">Welcome,  {{userNam}}</p>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+       <div class="search">
+        <input class="form-control ms-auto inp" type="search"  (input)="onKeydown($event)" placeholder="Search the area/region" aria-label="Search">
+        <ul class="search-list">
+          <!-- <li *ngFor="let val of vals"> {{val}}</li> -->
+          <!-- <li>{{vals}}</li> -->
+          <!-- <li>{{items}}</li> -->
+        </ul>
+       </div> 
+       <button class="btn btn-outline-success ms-auto" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>

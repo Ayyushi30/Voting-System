@@ -1,0 +1,16 @@
+.banner{
+  background-image: url('src/assets/img/evoting1.png');
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  
+}
+.banner h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    top: 10%;
+    left: 20%;
+    position: absolute;
+}
+
