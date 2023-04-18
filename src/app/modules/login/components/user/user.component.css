@@ -1,0 +1,41 @@
+body{margin-top:20px;
+    color: #9b9ca1;
+    }
+    .bg-secondary-soft {
+        background-color: rgba(208, 212, 217, 0.1) 
+    }
+    .rounded {
+        border-radius: 5px ;
+    }
+    .py-5 {
+        padding-top: 3rem ;
+        padding-bottom: 3rem ;
+    }
+    .px-4 {
+        padding-right: 1.5rem ;
+        padding-left: 1.5rem ;
+    }
+
+.imgContainer a{
+    float: right;
+    margin-right: 5px;
+}
+.imgContainer a:link{
+    color: blue;
+}
+
+.vote{
+    
+    margin-top: 30px;
+    float: left;
+}
+.logout{
+    margin-top: 30px;
+    float: right;
+}
+
+.userImg{
+    height: 60px;
+    width: 60px;
+}
+

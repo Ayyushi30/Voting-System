@@ -1,0 +1,115 @@
+[
+      {
+        "state": "Andhra Pradesh",
+        "type": "Assembly",
+        "startDate": "2024-03-15",
+        "endDate": "2024-03-17",
+        "status": "upcoming"
+      },
+      {
+        "state": "Assam",
+        "type": "Assembly",
+        "startDate": "2023-05-27",
+        "endDate": "2023-05-02",
+        "status": "recent"
+      },
+      {
+        "state": "Bihar",
+        "type": "Assembly",
+        "startDate": "2025-10-15",
+        "endDate": "2025-11-15",
+        "status": "upcoming"
+      },
+      {
+        "state": "Chhattisgarh",
+        "type": "Assembly",
+        "startDate": "2023-10-15",
+        "endDate": "2023-10-21",
+        "status": "upcoming"
+      },
+      {
+        "state": "Goa",
+        "type": "Assembly",
+        "startDate": "2023-04-14",
+        "endDate": "2023-04-20",
+        "status": "recent"
+      },
+      {
+        "state": "Gujarat",
+        "type": "Assembly",
+        "startDate": "2025-12-01",
+        "endDate": "2025-12-31",
+        "status": "upcoming"
+      },
+      {
+        "state": "Haryana",
+        "type": "Assembly",
+        "startDate": "2024-6-15",
+        "endDate": "2024-6-21",
+        "status": "upcoming"
+      },
+ 
+      {
+        "state": "Himachal Pradesh",
+        "type": "Assembly",
+        "startDate": "2022-11-15",
+        "endDate": "2022-11-21",
+        "status": "upcoming"
+      },
+      {
+        "state": "Jharkhand",
+        "type": "Assembly",
+        "startDate": "2024-10-15",
+        "endDate": "2024-10-21",
+        "status": "upcoming"
+      },
+      {
+        "state": "Karnataka",
+        "type": "Assembly",
+        "startDate": "2023-05-01",
+        "endDate": "2023-05-31",
+        "status": "upcoming"
+      },
+      {
+        "state": "Kerala",
+        "type": "Assembly",
+        "startDate": "2023-04-01",
+        "endDate": "2023-04-23",
+        "status": "recent"
+      },
+      {
+        "state": "Madhya Pradesh",
+        "type": "Assembly",
+        "startDate": "2023-10-15",
+        "endDate": "2023-10-21",
+        "status": "upcoming"
+      },
+      {
+        "state": "Maharashtra",
+        "type": "Assembly",
+        "startDate": "2024-10-01",
+        "endDate": "2024-10-31",
+        "status": "upcoming"
+      },
+      {
+        "state": "Manipur",
+        "type": "Assembly",
+        "startDate": "2022-02-01",
+        "endDate": "2022-02-28",
+        "status": "recent"
+      },
+      {
+        "state": "Tamil Nadu",
+        "type": "Local Body",
+        "startDate": "2022-10-15",
+        "endDate": "2022-10-18",
+        "status": "recent"
+      },
+      {
+        "state": "Kerala",
+        "type": "Panchayat",
+        "startDate": "2024-12-01",
+        "endDate": "2024-12-05",
+        "status": "recent"
+      }
+]

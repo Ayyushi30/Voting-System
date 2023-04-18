@@ -1,34 +1,197 @@
-<div class="container">
-    <div class="row">
-        <div class="column-md-6">
-            <div class="card">
+<!-- <app-header></app-header>
+<div class="container2"> -->
+<!-- <div class="row"> -->
+<!-- <div class="column-md-6"> -->
+<!-- <div class="card">
                 <div class="text-center">
-                    <h1>Sign Up</h1>
-                    <h6>Register Yourself!!</h6>
+                    <h1>Register Yourself!</h1>
+                   
                 </div>
                 <form>
                     <form [formGroup]="signupForm" (ngSubmit)="signUp()">
                         <div class="form-group">
                           <label for="name" class="form-label">Full Name</label>
-                          <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
+                          <input formControlName="name" type="text" class="ng-touched ng-invalid" class="form-control"
+                          id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
+                          <div ><span style="color: red;" *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">This field is required.</span> </div>
                         </div>
                         <div class="form-group">
                           <label for="ContactNumber" class="form-label">Contact Number</label>
-                          <input formControlName="phone" type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Contact Number">
+                          <input formControlName="phone" type="number" class="ng-touched ng-invalid" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Contact">
+                          <div ><span style="color: red;" *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">This field is required.</span> </div>
                         </div>
                         <div class="form-group">
-                          <label for="email" class="form-label">Email address</label>
-                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Email">
+                          <label for="email" class="form-label">Email Address</label>
+                          <input formControlName="email" type="email" class="ng-touched ng-invalid" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Email">
+                          <div ><span style="color: red;" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">The Email you entered is not valid.</span> </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="age" class="form-label">Age</label>
+                          <input formControlName="age" type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Age">
+                        </div>
+                        <div class="form-group">
+                          <label for="gender" class="form-label">Gender:</label>
+                          <select class="form-select" formControlName="gender" type="select" aria-label="Default select example">
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="Region" class="form-label">Region</label>
+                          <input formControlName="area" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Region">
                         </div>
                         <div class="form-group">
                           <label for="password" class="form-label">Password</label>
                           <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Sign Up</button>
+                        <button type="submit" class="btn btn-success mb-2" [disabled]="!signupForm.valid">Sign Up</button>
+                
                     </form>
                     <a style="color: #fff; margin-top: 10px" routerLink="/login">Already registered? Click to Login!!</a>
                 </form>
-            </div>
+                
+                <p style="color:white; text-align: center; margin-top: 5px;">Or signup with Google</p>
+                <button (click)="onGoogleSignIn()" style="margin: auto;">
+                  <div id="g_id_onload"
+                data-client_id="282829664-alnv0thvns19gn09esu52m630d61ifoe.apps.googleusercontent.com"
+                data-login_uri="http://localhost:4200/"
+                data-auto_prompt="false">
+               </div>
+               <div class="g_id_signin"
+                  data-type="standard"
+                  data-size="large"
+                  data-theme="outline"
+                  data-text="sign_in_with"
+                  data-shape="rectangular"
+                  data-logo_alignment="left"
+                  >
+               </div></button>
         </div>
+     </div> -->
+<!-- </div>  -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="split left">
+        <div class="centered">
+          <div class="header">
+            <div class="img"><img src="../../../../../assets/img/logo.png" style="width: 70px; height: 60px;"></div>
+            <div>
+              <h1>Voter Portal</h1>
+              <h3>Election Comission of India</h3>
+            </div>
+          </div>
+          <div class="heading-ques">
+            <h1>What do you need to</h1>
+            <h1>do today?</h1>
+          </div>
+          <div class="list">
+            <ul class="list-group">
+              <li>Enroll To Vote</li>
+              <li>Review the ballot</li>
+              <li>Vote your favorite Candidate</li>
+              <li>Verify your selected vote</li>
+              <li>Logout of the e-voting platform</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
     </div>
-</div>
+    <div class="col">
+      <div class="split right">
+        <div class="centered">
+          <div class="top">
+            <div class="container">
+              <div class="mb-5">
+                <h2>Register Yourself</h2>
+                <h6>Already have an account?
+                  <a href="#" class="link-btn-orange" data-toggle="modal" data-target="#create-account"
+                    routerLink="/login">Login</a>
+                </h6>
+              </div>
+              <div class="signform">
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+
+                  <div class="form-group">
+                    <label for="name" class="form-label">Full Name:</label>
+                    <input formControlName="name" type="text" class="ng-touched ng-invalid" class="form-control"
+                      id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Full Name">
+                    <div><span style="color: red;"
+                        *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched">This field is
+                        required.</span> </div>
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="ContactNumber" class="form-label">Contact Number:</label>
+                    <input formControlName="phone" type="number" class="ng-touched ng-invalid" class="form-control"
+                      id="exampleInputPassword1" placeholder="Enter Your Contact">
+                    <div><span style="color: red;"
+                        *ngIf="!signupForm.get('phone').valid && signupForm.get('phone').touched">This field is
+                        required.</span> </div>
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="email" class="form-label">Email Address:</label>
+                    <input formControlName="email" type="email" class="ng-touched ng-invalid" class="form-control"
+                      id="exampleInputEmail1" placeholder="Enter Your Email">
+                    <!-- <div> <button type="submit" style="margin-left: 10px;" class="btn btn-success mb-2">Verify Your -->
+                        <!-- Email</button></div> -->
+                  </div>
+                  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Please enter the OTP</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form [formGroup]="otpVerifyForm">
+                            <div class="form-group">
+                              <label for="otp">OTP:</label>
+                              <input type="text" class="form-control" id="otp" formControlName="otp">
+                              
+                            </div>
+                            <div class="modal-footer">
+                              <button type="submit" class="btn btn-danger" [disabled]="!otpVerifyForm.valid">
+                                Submit
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="age" class="form-label">Age:</label>
+                    <input formControlName="age" type="number" class="form-control" id="exampleInputPassword1"
+                      placeholder="Enter Your Age">
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="gender" class="form-label">Gender:</label>
+                    <select class="form-select" formControlName="gender" type="select"
+                      aria-label="Default select example">
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="Region" class="form-label">Region:</label>
+                    <input formControlName="area" type="text" class="form-control" id="exampleInputPassword1"
+                      placeholder="Enter Your Region">
+                  </div>
+
+                  <div class="form-group" style="display: flex;">
+                    <label for="password" class="form-label">Password:</label>
+                    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1"
+                      placeholder="Enter Your Password">
+                  </div>
+                  <button type="submit" style="margin-left: 10px;" class="btn btn-success mb-2"
+                    [disabled]="!signupForm.valid">Sign Up</button>
+
+                </form>
+              </div>
+
+
+            </div>

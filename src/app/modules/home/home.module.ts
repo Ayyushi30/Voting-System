@@ -4,9 +4,20 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home-routing.module';
-import { HeaderComponent } from './components/header/header.component';
-import { ElectionTypeComponent } from './components/election-type/election-type.component';
 import { LoginModule } from '../login/login.module';
+import { HttpClientModule } from '@angular/common/http';
+import { VoteComponent } from "./components/vote/vote.component";
+import { SearchComponent } from './components/search/search.component';
+import { MaterialModule } from '../material/material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { SharedModule } from '../shared/shared.module';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ScrolltextComponent } from './components/scrolltext/scrolltext.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 
 
@@ -14,8 +25,15 @@ import { LoginModule } from '../login/login.module';
   declarations: [
   
     HomeComponent,
-    HeaderComponent,
-    ElectionTypeComponent,
+    VoteComponent,
+    SearchComponent,
+    ConfirmationComponent,
+    FooterComponent,
+    CarouselComponent,
+    ScrolltextComponent,
+    DialogComponent,
+    DashboardComponent,
+    
 
   ],
   imports: [
@@ -23,9 +41,17 @@ import { LoginModule } from '../login/login.module';
     HomeRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    LoginModule
+    HttpClientModule,
+    LoginModule,
+    MaterialModule,
+    NgbModule,
+    SharedModule
    
   
+  ],
+  exports:[
+    ConfirmationComponent
+
   ]
 })
 export class HomeModule { }

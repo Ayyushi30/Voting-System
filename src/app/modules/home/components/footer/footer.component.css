@@ -1,0 +1,30 @@
+.BestView {
+    font-size: 10px;
+    margin: 20px 0px;
+    text-align: center;
+    font-family: Tahoma,Verdana,Segoe,sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 13.2px;
+    text-decoration: none;
+    padding: 0px 5px;
+    /* color: #385F86; */
+    color: #000000;
+    margin-bottom: -5px;
+}
+.copyRightSection {
+    display: block;
+    margin: 10px 0px;
+    text-align: center;
+    font-family: Tahoma,Verdana,Segoe,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 13.2px;
+    text-decoration: none;
+    padding: 0px 5px;
+    /* color: #385F86; */
+    color: #000000;
+}

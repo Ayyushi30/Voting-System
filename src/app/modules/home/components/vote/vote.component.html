@@ -1,0 +1,71 @@
+<app-header></app-header>
+<app-carousel></app-carousel>
+<!-- <h3 style="font-weight: bold; font-size: 40px; margin-top: 20px; color: black; text-decoration: underline;">WELCOME TO THE E-VOTING PLATFORM</h3> -->
+
+
+
+<h1 style="font-size: 25px; margin-top: 20px;">List of Candidates</h1>
+<p style="color: red; font-size: 20px; font-weight:20px ;" >Kindly Cast Your Valuable Vote</p>
+<div class="candidates">
+  <div class="container-candidates">
+    <div class="row row-card-container ">
+
+      <div class="card " style="width: 25rem;" *ngFor="let p of parties">
+        <div><img class="card-img-top" [src]="p.logo" alt="Card image cap" style="height: 170px; width: 230px;"></div>
+        <div class="card-body">
+          <h5 class="card-title">Party Name: {{p.party_name}}</h5>
+          <p class="card-title">Candidate Name: {{p.candidate_name}}</p>
+          <button class="btn btn-primary" (click)="openConfirmationDialogEdit()">Vote Now</button>
+        </div>
+      </div>
+
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<!-- <table class="table table-image table-striped">
+            <thead>
+              <tr style="font-size: medium;">
+                <th scope="col">Logo</th>
+                <th scope="col">Party</th>
+                <th scope="col">Candidate Name</th>
+                <th scope="col">Vote Now</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of parties" style="font-size: 20px;" >
+                <td><img [src]= "p.logo" style="width: 50px; height: 50px;"></td>
+                <td>{{p.party}}</td>
+                <td>{{p.candidateName}}</td>
+                <td><button class="btn btn-success" style="width: 80px; height: 40px; font-size: 14px;" (click)="openConfirmationDialogEdit()">Vote Now</button></td>
+              </tr>
+            </tbody>
+          </table>
+       </div> 
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmation Message!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Yes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-vote">
+    <h2>You sure ?</h2>
+    <button>yes</button>
+    <button>No</button>
+  </div> -->

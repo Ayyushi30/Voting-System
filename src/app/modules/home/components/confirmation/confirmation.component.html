@@ -1,0 +1,14 @@
+<div class="mat-dialog-container ">
+    <mat-card>
+        <h1 mat-dialog-title>{{ title }}</h1>
+        <mat-card-content>
+          <p>{{ message }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button mat-dialog-close class="btn btn-success"  (click)="onNoClick()">No</button>
+          <!-- <input> -->
+          <!-- <button mat-raised-button color="primary" class="btn btn-primary" [mat-dialog-close]="true">Yes</button> -->
+          <button mat-raised-button color="primary" class="btn btn-primary" (click)="onYesClick()">Yes</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

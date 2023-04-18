@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+            <div class="col-12">
+                <!-- Page title -->
+                <div class="my-5">
+                    <h3 style="font-size: 30px;">My Profile</h3>
+                    <hr>
+                </div>
+                <!-- Form START -->
+                <form class="file-upload">
+                    <div class="row mb-5 gx-5">
+                        <!-- Contact detail -->
+                        <div class="col-xxl-8 mb-5 mb-xxl-0">
+                            <div class="bg-secondary-soft px-4 py-5 rounded">
+                                <div class="row g-3">
+                                    <!-- <h4 class="mb-4 mt-0">Contact Details</h4> -->
+                                    <div class="imgContainer"><img class="userImg" src="../../../../../assets/img/download.png">
+                                    <a routerLink="">Go back to home</a></div>
+                                    <!-- <img class="userImg" src="../../../../../assets/img/download.png">
+                                    <div class="home"><a routerLink="/home">Go back to home</a></div> -->
+                                    <!-- Name -->
+                                    <div class="col-md-6">
+                                        <label class="form-label"> Name</label>
+                                        <p>{{profileData.name}}</p>
+                                    </div>
+                                    <!-- region -->
+                                    <div class="col-md-6">
+                                        <label class="form-label"> Region </label>
+                                        <p>{{profileData.area}}</p>
+                                    </div>
+                                    <!-- Age -->
+                                    <div class="col-md-6">
+                                        <label class="form-label"> Age </label>
+                                        <p>{{profileData.age}}</p>
+                                    </div>
+                                    <!-- Mobile number -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Mobile number </label>
+                                        <p>{{profileData.phone}}</p>
+                                        <!-- <p type="text" class="form-control" aria-label="Phone number" > -->
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Email </label>
+                                        <p>{{profileData.email}}</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Gender </label>
+                                        <p>{{profileData.gender}}</p>
+                                    </div>
+
+                                    <!-- Voter ID -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Voter ID</label>
+                                        <p>{{profileData._id}}</p>
+                                    </div>
+                                    <!-- Election date-->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Election Date</label>
+                                        <!-- <p></p> -->
+                                    </div>
+                                    <div class="btns">
+                                    <div class="vote"><button type="submit" class="btn btn-primary mb-2" 
+                                        routerLink="/vote" (click)="getCandidates()">Click to Vote</button></div>
+                                     <!-- <div class="logout"><button type="submit" class="btn btn-primary" routerLink="/home" (click)="logout()">Logout</button></div> -->
+                                    <div class="logout">
+                                        <button type="submit" class="btn btn-primary" (click)="openConfirmationDialogEdit()">Logout</button>
+                                    </div> 
+                                    </div>
+                                    <!-- <button type="submit" class="btn btn-primary mb-2">Click to Vote</button> -->
+
+                                </div> <!-- Row END -->
+                            </div>
+                        </div>
+                    </div>
+                </form> <!-- Form END -->
+                <!-- <table class="table table-striped" style="margin-bottom: 50px;">
+                    <thead>
+                      <tr style="font-size: medium;">
+                        <th scope="col">Voted</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="font-size: 20px;" > -->
+                        <!-- <td>{{p.party}}</td>
+                        <td>{{p.date}}</td>
+                        <td>{{p.date}}</td> -->
+                      <!-- </tr>
+                    </tbody>
+                </table> -->
+            </div>
+    </div>
+</div>

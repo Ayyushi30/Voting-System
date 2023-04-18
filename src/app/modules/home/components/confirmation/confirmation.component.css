@@ -1,0 +1,21 @@
+mat-card {
+    width: 400px;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+.mat-dialog-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+.btn{
+    /* background-color: green;
+    border-color: green; */
+    margin:5px;
+    color: white;
+     }

@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container1">
+    <div class="row">
+        <div class="column-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Two Factor Authentication</h1>
+                    <!-- <h6>Please enter your contact Number & password!!</h6> -->
+                </div>
+                <form>
+                    <form [formGroup]= "otpForm" (ngSubmit)="twoFactorAuthenticate()">
+                        <div class="form-group">
+                          <label for="ContactNumber" class="form-label">Contact Number</label>
+                          <input formControlName="phone" type="number" name="contact_number" class="ng-touched ng-invalid" class="form-control" id="exampleInputContact" aria-describedby="contact" placeholder="Enter Your Contact Number">
+                          <div ><span style="color: red;" *ngIf="!otpForm.get('phone').valid && otpForm.get('phone').touched">This field is required.</span> </div>
+                        
+                        </div>
+                        <div class="form-group">
+                          <label for="otp" class="form-label">OTP</label>
+                          <input formControlName="otp" type="number" name="password" class="ng-touched ng-invalid" class="form-control" id="exampleInputPassword1" placeholder="OTP">
+                          <div ><span style="color: red;" *ngIf="!otpForm.get('password').valid && otpForm.get('password').touched">This field is required.</span> </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2" (click)="routeToHome()">Submit OTP</button>
+                    </form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
