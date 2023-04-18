@@ -1,0 +1,33 @@
+<div #namebutton>
+    <mat-card>
+        <div class="close" style="height: 50px;;">
+            <span (click)="onNoClick()" class="close-button topright" style="height:50px; width: 60px;">&times;</span>
+        </div>
+            <!-- <img src="../../../../../assets/img/cross.png" style="height:10px; width: 10px; float: right;">
+             -->
+            <!-- <span (click)="onNoClick()" class="close-button topright" style="height:50px; width: 60px;">&times;</span> -->
+        
+        <mat-card-content>
+            <form [formGroup]="otpForm">
+                <div class="form-group">
+                    <label class="form-label">VoterID:</label>
+                    <input formControlName="voterId" name="voterID" class="form-control"
+                        placeholder="Enter Your VOTER ID">
+                </div>
+                <button type="submit" style="padding-left: 80px;" class="btn btn-primary mb-2"
+                    style="margin-bottom: 15px;" (click)="sendotp()">Send OTP</button>
+                <p style="color: green; font-weight: bold;">{{ otpSentMessage }}</p>
+                <div class="form-group" *ngIf="isOtpButtonClicked">
+                    <label for="otp">OTP:</label>
+                    <input type="text" class="form-control" id="otp" formControlName="otp"
+                        placeholder="Please Enter the OTP">
+                </div>
+                <button *ngIf="isOtpButtonClicked" type="button" class="btn btn-primary"
+                    (click)="verify()">Submit</button>
+            </form>
+        </mat-card-content>
+
+    </mat-card>
+</div>
+
+<!-- <p>TEST</p> -->

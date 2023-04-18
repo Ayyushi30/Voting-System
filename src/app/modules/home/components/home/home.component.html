@@ -1,0 +1,144 @@
+<app-header></app-header>
+
+<div class="carousel" *ngIf="LoginService.isAuthenticated()">
+  <app-carousel></app-carousel>
+</div>
+
+<div class="scrolltext" *ngIf="LoginService.isAuthenticated()">
+  <app-scrolltext></app-scrolltext>
+</div>
+
+<div class="container-election" *ngIf="LoginService.isAuthenticated()">
+  <h2 style="height: 10px; color: black; font-weight: bold;; margin-top: 30px;">List of Elections in India</h2>
+  <!-- <hr> -->
+  <div class="filter">
+    <div class="form-group">
+      <label for="state-filter">Filter by State:</label>
+      <select id="state-filter" class="form-control" (click)="filterByState($event)">
+        <option value="">All States</option>
+        <option *ngFor="let election of elections" [value]="election.state">{{ election.state }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="status-filter">Filter by Status:</label>
+      <select id="status-filter" class="form-control" (click)="filterByStatus($event)">
+        <option value="">All Status</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="recent">Recent</option>
+      </select>
+    </div>
+  </div>
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th>State</th>
+        <th>Election Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="cursor: pointer;" *ngFor="let e of filteredElections" (click)="openOTPModal()">
+        <td >{{ e.state }}</td>
+        <td>{{ e.type }}</td>
+        <td>{{ e.startDate | date : 'dd/MM/YYYY'}}</td>
+        <td>{{ e.endDate | date : 'dd/MM/YYYY' }}</td>
+        <td>{{ e.status  | uppercase }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+       <!-- <div class="modal-header" style="height: 40px; margin-top: 5px;"> -->
+        <!-- <img src="../../../../../assets/img/cross.png" style="height: 10px; width: 10px; floa"> -->
+      <!-- </div> -->
+       <!-- <header style="background-color:#000;color:#fff;" >
+        <span class="close-button topright" (click)="JoinAndClose()">&times;</span>
+      </header> -->
+      <!-- <div class="modal-header">
+        <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button> -->
+        <!-- <div class="modal-header">
+          <button type="button" #closebutton class="close" data-dismiss="modal" >&times;</button>
+           <h4 class="modal-title">Modal Header</h4> -->
+        <!-- </div>  -->
+      <div class="modal-body">
+        <h3 style="text-align: center; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"> Verify your Voter ID</h3>
+        <form [formGroup]="otpForm"> 
+          <div class="form-group">
+              <label class="form-label">VoterID:</label>
+              <input formControlName="voterId" name="voterID" class="form-control" placeholder="Enter Your VOTER ID">
+            </div>
+            <button type="submit" style="padding-left: 80px;" class="btn btn-primary mb-2" style="margin-bottom: 15px;" (click)="sendotp()">Send
+              OTP</button>
+              <p style="color: green; font-weight: bold;">{{ otpSentMessage }}</p>
+          <div class="form-group" *ngIf="isOtpButtonClicked">
+            <label for="otp">OTP:</label>
+            <input type="text" class="form-control" id="otp" formControlName="otp"  placeholder="Please Enter the OTP">
+          </div>
+             <button *ngIf="isOtpButtonClicked" type="button" class="btn btn-primary" (click)="verify()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<div class="banner" *ngIf="!LoginService.isAuthenticated()">
+  <h1>Welcome to the e-voting System</h1>
+  <div class="container">
+    <div class="purpose" *ngIf="!LoginService.isAuthenticated()">
+      <ul>
+        <h3>Purpose of e-voting:</h3>
+        <li>To eliminate paper in the voting process. This involves sending of notices and ballot papers and receiving
+          the said ballot votes.</li>
+        <li>Facilitate electronic voting on resolutions of companies in a fair and transparent manner for all classes of
+          security/stakeholders.</li>
+        <li>Enable security holders to vote at a time and place of their convenience.</li>
+        <li>Eliminate postal and other natural delays which cause a hindrance to postal ballot.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="heading" *ngIf="!LoginService.isAuthenticated()">
+  <h1 style="color: black; font-weight: bolder; margin-bottom: 0px; margin-top: 20px;">Check Out the Latest News on
+    Elections in India
+  </h1>
+</div>
+<div class="container-video" *ngIf="!LoginService.isAuthenticated()">
+  <div class="row">
+    <div class="col">
+      <iframe [src]="safeUrl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col">
+      <iframe [src]="videoUrl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col">
+      <iframe [src]="anotherUrl" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #B1D4E0;" class="container-guide" *ngIf="!LoginService.isAuthenticated()">
+  <div class="row">
+    <h3>Here is a step-by-step guide for how to e-vote using an e-voting system:</h3>
+    <ol>
+      <li>Authenticate: Enter your login credentials to authenticate yourself. This may include your contact number,
+        password.</li>
+      <li>Review the candidates/options: Review the candidates or options available for voting. You may be able to view
+        more information about each candidate or option, such as their name, photo, and party affiliation.</li>
+      <li>Select your choice: Make your selection by clicking or tapping on the candidate or option you wish to vote
+        for. The selection process may include confirmation prompts to ensure you are casting your vote correctly.</li>
+      <li>Review your vote: Once you have made your selection, you will have the option to review your vote to ensure it
+        is accurate. You may be able to make changes to your vote at this stage if necessary.</li>
+      <li>Confirm your vote: When you are satisfied with your vote, confirm your selection. The system will provide you
+        with a confirmation that your vote has been recorded.</li>
+      <li>Logout: Once you have confirmed your vote, log out of the e-voting system to ensure the security of your vote
+        and to prevent unauthorized access.</li>
+    </ol>
+  </div>
+</div>
+
+<app-footer></app-footer>

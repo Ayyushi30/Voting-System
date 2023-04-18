@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="container-inp">
+  <div class="select-cont">
+
+    <p> Select the Region :</p>
+    <select id="region" (change) = "handleChange($any($event.target).value)"> 
+         <option ></option>
+         <option value={{regions.region}} *ngFor="let regions of region">{{regions.region}} </option>
+    </select>
+    
+    <button class=" btn btn-primary" (click)="handleSubmit()">Continue</button>
+
+  </div>
+</div>

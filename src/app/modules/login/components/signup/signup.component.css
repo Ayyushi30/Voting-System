@@ -1,0 +1,187 @@
+/* .container2{
+    background-image: url(../../../../../assets/img/bg1.jpg);
+    height: 90vh;
+    width: 100%;
+    /* background-size: auto 100%; */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+/* .card{
+    
+    border: none;
+    width: 500px;
+    margin-top: 2em;
+    padding: 0 30px 30px 30px;
+    height: auto;
+    
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    
+}
+.card h1{
+
+    color: black;
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.form-select{
+    font-size: 14px;
+    height: 34px;
+}
+input.ng-touched.ng-invalid{
+    border: red 1px solid;
+}
+
+p{
+    margin-top: 15px;
+}
+.card form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+label{
+    color: black;
+    font-weight: 5px;
+}
+.card h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.btn{
+    height: 40px;
+    margin-top: 20px;
+} */
+
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #000C66;
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: white;
+  }
+  .header h1{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 2px;
+    margin-left: 8px;
+    margin-top: 0;
+  }
+  .header h3{
+    color: white;
+    font-weight:normal;
+    font-size: 18px;
+    margin-left: 8px;
+  }
+  .heading-ques{
+    margin-top: 40px;
+    margin-left: 190px;
+
+  }
+  .heading-ques h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 45px;
+  }
+  .list{
+    margin-left: 190px;
+    margin-top: 25px;
+  }
+  .list ul{
+    list-style-type: none;
+  }
+  .list-group li{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+  }
+  .list ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  .mb-5{
+    margin: 10px;
+  }
+  .mb-5 h2{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .mb-5 h6{
+    font-size: 18px;
+  }
+  .mb-5 a{
+    color: red;
+  }
+  .form{
+    padding: 20px;
+  }
+  .signform{
+    margin: 10px;
+    padding: 10px;
+  }
+  .signform input{
+    width: 350px;
+  }
+  .signform select{
+    width: 200px;
+    font-size: 14px;
+    height: 34px;
+    margin-left: 10px;
+  }
+  input.ng-touched.ng-invalid{
+    border: red 1px solid;
+}
+
+.custom-toast {
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+.toast-top-right{
+  right: 10px;
+  top: 10px;
+}
+.signform .form-group{
+    display: flex;
+    margin-left: 12px;
+    margin: 20px;
+}
+.signform input{
+    margin-left: 10px;
+}
+.signform label{
+    width: 7%;
+}

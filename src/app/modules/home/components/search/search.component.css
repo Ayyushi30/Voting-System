@@ -1,0 +1,33 @@
+
+.select-cont{
+    margin: -6em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+    flex-direction: column;
+    font-size: 2rem;
+}
+#region{
+    margin-bottom: 1em;
+}
+select{
+    width: 500px;
+    text-align: center;
+}
+.container-inp{
+    background-image: url(../../../../../assets/img/map.jpg);
+    padding: 15px;
+    height: 91.5vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  
+}
+p{
+    font-size: larger;
+    font-weight: bold;
+}
+

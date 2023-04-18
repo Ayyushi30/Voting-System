@@ -1,0 +1,144 @@
+    .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #000C66;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+  }
+  input.ng-touched.ng-invalid{
+    border: red 1px solid;
+}
+  
+  .right {
+    right: 0;
+    background-color: white;
+  }
+  .header{
+    padding: 20px;
+    display: flex;
+  }
+  
+  .header h1{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 2px;
+    margin-left: 8px;
+    margin-top: 0;
+  }
+  .header h3{
+    color: white;
+    font-weight:normal;
+    font-size: 18px;
+    margin-left: 8px;
+  }
+  .heading-ques{
+    margin-top: 40px;
+    margin-left: 190px;
+
+  }
+  .heading-ques h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 45px;
+  }
+  .list{
+    margin-left: 190px;
+    margin-top: 25px;
+  }
+  .list ul{
+    list-style-type: none;
+  }
+  .list-group li{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+  }
+  .list ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  .mb-5{
+    margin: 10px;
+  }
+  .mb-5 h2{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .mb-5 h6{
+    font-size: 18px;
+  }
+  .mb-5 a{
+    color: red;
+  }
+  .form{
+    padding: 20px;
+  }
+  
+  input.ng-touched.ng-invalid{
+    border: red 1px solid;
+}
+
+/* .custom-toast {
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+} */
+.toast-top-right{
+  right: 10px;
+  top: 10px;
+}
+.loginform .form-group{
+  display: flex;
+  margin-left: 12px;
+  margin: 10px;
+}
+.loginform input{
+  margin-left: 10px;
+  width: 300px;
+}
+.loginform label{
+  width: 7%;
+}
+#loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+ .flex{
+  width: 58%;
+  display: flex;
+  justify-content: space-between;
+ }

@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="split left">
+                <div class="centered">
+                    <div class="header">
+                        <div class="img"><img src="../../../../../assets/img/logo.png"
+                                style="width: 70px; height: 60px;"></div>
+                        <div>
+                            <h1>Voter Portal</h1>
+                            <h3>Election Comission of India</h3>
+                        </div>
+                    </div>
+                    <div class="heading-ques">
+                        <h1>What do you need to</h1>
+                        <h1>do today?</h1>
+                    </div>
+                    <div class="list">
+                        <ul class="list-group">
+                            <li>Enroll To Vote</li>
+                            <li>Review the ballot</li>
+                            <li>Vote your favorite Candidate</li>
+                            <li>Verify your selected vote</li>
+                            <li>Logout of the e-voting platform</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="split right">
+                <div class="centered">
+                    <div class="top">
+                        <div class="container">
+                            <div class="mb-5">
+                                <h2>Login</h2>
+                                <h6>Don’t have an account?
+                                    <a href="#" class="link-btn-orange" data-toggle="modal"
+                                        data-target="#create-account" routerLink="/signup">Create an account</a>
+                                </h6>
+                            </div>
+                            <div class="loginform">
+                                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email id:</label>
+
+                                        <input formControlName="email" type="email" name="email"
+                                            class="ng-touched ng-invalid" ngModel class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter Your Email">
+                                        <div><span style="color: red;"
+                                                *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">This
+                                                field is required.</span> </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1" class="form-label">Password:</label>
+                                        <input formControlName="password" type="password" name="password"
+                                            class="ng-touched ng-invalid" ngModel class="form-control"
+                                            id="exampleInputPassword1" placeholder="Password">
+                                        <div><span style="color: red;"
+                                                *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">This
+                                                field is required.</span> </div>
+                                    </div>
+                                    <div class="flex">
+                                        <button type="submit" class="btn btn-primary mb-2">Verify</button>
+                                    </div>
+                                    <!-- <button type="submit" class="btn btn-primary mb-2">Verify</button> -->
+                                </form>
+                                
+                                <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Please enter the OTP</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form [formGroup]="otpForm" (ngSubmit)="verify()">
+                                                    <div class="form-group">
+                                                        <label for="otp">OTP:</label>
+                                                        <input type="text" class="form-control" id="otp"
+                                                            formControlName="otp">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-danger">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="admin"> -->
+                            <!-- <img src="../../../../../assets/img/adminlogin.png" height="60px" width="70px">
+                                <div class="button"> <button class="button btn-primary">Login As Admin</button></div> -->
+                            <!-- <button class="button btn-primary">Login As Admin</button> -->
+                            <!-- <a routerLink="">Login As Admin</a> -->
+
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-circus"
+    [fullScreen]="false"></ngx-spinner>

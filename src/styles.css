@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../src/app/modules/login/components/login/login.component.css';
+@import "../node_modules/ngx-spinner/animations/ball-circus.css";
+/* @import '~ngx-toastr/toastr.css'; */
+*{
+    box-sizing: 0;
+}
+:root{
+    --primary-color:blue
+}
+body{
+    margin: 0;
+    font-family: quicksand, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#toast-container > div {
+    opacity:1;
+}

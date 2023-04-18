@@ -1,0 +1,192 @@
+.banner{
+  background-image: url('src/assets/img/evoting1.png');
+  height: 91.5vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  /* position: fixed; */
+  
+}
+.banner h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    top: 30%;
+    left: 10%;
+    position: absolute;
+    /* margin-bottom: 5px; */
+}
+
+a{
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 80px;
+  font-size: 25px;
+}
+h2{
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.container{
+  padding-top: 200px;
+  width: 700px;
+  float: left;
+  padding-left: 100px;
+
+}
+.heading{
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-title{
+  color: black;
+  text-align: center;
+
+}
+
+.imgClass {
+  height: 50px;
+  width: 50px;
+}
+
+.purpose{
+  color: white;
+  font-size: 20px;
+}
+.purpose h3{
+  font-weight: bold;
+}
+.purpose li{
+  padding: 5px;
+}
+.electionList{
+  margin-top: 0px;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+button{
+  margin-left: 5px;
+}
+.container-video{
+  margin-top: 40px;
+  margin-left: 30px;
+  display: flex;
+  justify-content:space-evenly;
+  padding: 0px;
+
+}
+iframe{
+  margin-top: 10px;
+  height: 250px;
+  width: 350px;
+  
+}
+.scroll {
+  /* border: 3px solid red; */
+  border-radius: 2px;
+  /* overflow: hidden; */
+  /* background-color: red; */
+  /* position: absolute; */
+  bottom: 0;
+
+
+}
+
+.container-guide{
+  margin-top: 30px;
+  width: auto;
+  padding: 50px;
+
+}
+.container-guide h3{
+  font-size: medium;
+  font-weight: bolder;
+}
+.container-guide li{
+  font-size: 15px;
+  color: black;
+}
+.table-striped{
+  margin: auto;
+  width: 70%;
+  /* height: 700px; */
+  padding: 50px;
+  border:grey;
+  background-color: white;
+}
+.container-election{
+  margin: 20px;
+}
+
+.form-group{
+  margin: 20px;
+  width: 30%;
+  
+}
+.filter{
+  display: flex;
+  margin: auto;
+  width: 50%;
+  
+}
+.table-striped td{
+  font-size: 16px;
+  padding: 10px;
+
+}
+.modal .form-group{
+  display: flex;
+}
+.form-group label{
+  padding-right:30px
+}
+.form-group input{
+  width: 300px;
+}
+.modal-body button{
+  padding-top: 2px;
+}
+/* .modal-header img{
+ float: right;
+ margin-right: 0px;
+ 
+} */
+.close-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap
+}
+
+.topright {
+  position: absolute;
+  right: 0;
+  top: 0
+}
