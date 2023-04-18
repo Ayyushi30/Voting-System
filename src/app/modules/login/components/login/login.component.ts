@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.SpinnerService.show(); 
     let obj = this.loginForm.value;
-    this.loginservice.logIn(this.l      ).subscribe((res: any) => {
+    this.loginservice.logIn(this.loginForm.value).subscribe((res: any) => {
       if (res) {
         this.snackBar.open('Please check your mail!','Close',{
           duration: 2000,
