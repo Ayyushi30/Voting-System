@@ -8,9 +8,12 @@ import { NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  constructor() {}
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+
     
   }
   slideActivate(ngbSlideEvent: NgbSlideEvent) {
@@ -20,9 +23,5 @@ export class CarouselComponent implements OnInit {
     console.log(NgbSlideEventSource.ARROW_LEFT);
     console.log(NgbSlideEventSource.ARROW_RIGHT);
   }
-
-  
 }
-
-
 

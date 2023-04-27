@@ -79,10 +79,7 @@ export class UserComponent implements OnInit{
       }
     });
   }
-  // canVote(): boolean {
-
-  //   return this.currentDate >= this.startDate && this.currentDate <= this.endDate;
-  // }
+  
   onButtonClicked() {
     this.buttonDisabled = true;
   }

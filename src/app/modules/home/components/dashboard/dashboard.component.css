@@ -1,0 +1,60 @@
+
+.dashboard{
+    margin: 20px;
+    /* font-weight: 250px; */
+    /* font-size: 100px; */
+}
+.dashboard h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.results-container{
+    border: black 1px solid;
+    margin: 30px;
+    padding: 20px;
+    height: 300px;
+}
+.results-heading{
+    background-color: darkgray;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.results-cards{
+    /* margin-top: 40px; */
+    display: flex;
+    /* height: 50px; */
+    /* width: 50px; */
+}
+/* .results-cards .cards{
+    height: 100px;
+    width: 300px;
+
+} */
+.card{
+    width: 50%;
+    margin: 20px;
+    /* justify-content: center; */
+    background-color: #F0F8FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    /* margin: 50px; */
+}
+h5{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+p{
+    font-weight: 50px;
+}
+.btn-primary{
+    height: 40px;
+    padding: 8px;
+    /* float: right; */
+    margin-left: 60%;
+
+}

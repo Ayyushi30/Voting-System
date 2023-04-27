@@ -17,6 +17,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ScrolltextComponent } from './components/scrolltext/scrolltext.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ErrorComponent } from './components/error/error.component';
+import { DragndropComponent } from './components/dragndrop/dragndrop.component';
 
 
 
@@ -33,6 +36,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ScrolltextComponent,
     DialogComponent,
     DashboardComponent,
+    ErrorComponent,
+    DragndropComponent,
     
 
   ],
@@ -45,7 +50,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginModule,
     MaterialModule,
     NgbModule,
-    SharedModule
+    SharedModule,
+    NgxSpinnerModule
    
   
   ],

@@ -14,37 +14,41 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './vote.component.html',
   styleUrls: ['./vote.component.css']
 })
-export class VoteComponent implements OnInit{
+export class VoteComponent implements OnInit {
 
-  parties: any =[];
+  parties: any = [];
+  vote:any={};
+  elecId:any={};
+  profile:any;
+  selectedParty: any;
 
   constructor(private _router: Router,
     private homeservice: HomeService,
-    private http:HttpClient,
+    private http: HttpClient,
     public dialog: MatDialog,
     private snackBar: MatSnackBar
-    ){
+  ) {
 
-    }
+  }
 
   ngOnInit(): void {
     this.getCandidatesData();
   }
 
-  getCandidatesData(){
-    this.homeservice.getParties().subscribe(res=>{
-      if(res){
+  getCandidatesData() {
+    this.homeservice.getParties().subscribe(res => {
+      if (res) {
         console.log(res.data);
-        this.parties=res.data;
+        this.parties = res.data;
       }
-    });  
+    });
   }
-                      
-  openConfirmationDialogEdit(): void {
+
+  openConfirmationDialogEdit(id:any,vId:any): void {
     const dialogRef = this.dialog.open(ConfirmationComponent, {
-      
+
       width: '400px',
-      height:'200px',
+      height: '200px',
       data: {
         title: 'Confirmation',
         message: 'Are you sure you want to cast your vote?'
@@ -52,16 +56,41 @@ export class VoteComponent implements OnInit{
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.snackBar.open('Your vote has been stored successfully!', 'Close', {
-          duration: 2000,
-        });
-        this._router.navigate(['/user']);
+        this.elecId=localStorage.getItem("elecId");
+        this.profile=localStorage.getItem("userData");
+        this.profile = JSON.parse(this.profile);
+        vId=this.profile.data.voter_id
+        this.vote={
+          "partyId" :id,
+          "electionId" : this.elecId,
+          "voterId" : vId
+          }
+        this.homeservice.selectedVote(this.vote).subscribe(res=>{
+          if(res){
+            this.snackBar.open('Your vote has been stored successfully!', 'Close', {
+              duration: 2000,
+            });
+            this._router.navigate(['/user']);
+          }
+        },
+        error=>{
+          console.log(error);
+          this.snackBar.open('Your vote has already been submitted!', 'Close', {
+            duration: 2000,
+          });
+          this._router.navigate(['/user']);
+        }
+        );
+       
       } else {
         this.snackBar.open('Kindly cast your vote!', 'Close', {
           duration: 2000,
         });
       }
     });
-}
+  }
+
+ 
+  
 }
 

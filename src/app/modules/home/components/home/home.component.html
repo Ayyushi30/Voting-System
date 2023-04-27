@@ -39,7 +39,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr style="cursor: pointer;" *ngFor="let e of filteredElections" (click)="openOTPModal()">
+      <tr style="cursor: pointer;" *ngFor="let e of filteredElections" (click)="openOTPModal(e.id)">
         <td >{{ e.state }}</td>
         <td>{{ e.type }}</td>
         <td>{{ e.startDate | date : 'dd/MM/YYYY'}}</td>
@@ -53,18 +53,6 @@
 <div class="modal" id="myModal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-       <!-- <div class="modal-header" style="height: 40px; margin-top: 5px;"> -->
-        <!-- <img src="../../../../../assets/img/cross.png" style="height: 10px; width: 10px; floa"> -->
-      <!-- </div> -->
-       <!-- <header style="background-color:#000;color:#fff;" >
-        <span class="close-button topright" (click)="JoinAndClose()">&times;</span>
-      </header> -->
-      <!-- <div class="modal-header">
-        <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button> -->
-        <!-- <div class="modal-header">
-          <button type="button" #closebutton class="close" data-dismiss="modal" >&times;</button>
-           <h4 class="modal-title">Modal Header</h4> -->
-        <!-- </div>  -->
       <div class="modal-body">
         <h3 style="text-align: center; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"> Verify your Voter ID</h3>
         <form [formGroup]="otpForm"> 
@@ -72,14 +60,14 @@
               <label class="form-label">VoterID:</label>
               <input formControlName="voterId" name="voterID" class="form-control" placeholder="Enter Your VOTER ID">
             </div>
-            <button type="submit" style="padding-left: 80px;" class="btn btn-primary mb-2" style="margin-bottom: 15px;" (click)="sendotp()">Send
+            <button type="submit" style="padding-left: 80px;" class="btn btn-primary mb-2" style="margin-bottom: 15px;" (click)="verifyVoter()">Send
               OTP</button>
               <p style="color: green; font-weight: bold;">{{ otpSentMessage }}</p>
           <div class="form-group" *ngIf="isOtpButtonClicked">
             <label for="otp">OTP:</label>
             <input type="text" class="form-control" id="otp" formControlName="otp"  placeholder="Please Enter the OTP">
           </div>
-             <button *ngIf="isOtpButtonClicked" type="button" class="btn btn-primary" (click)="verify()">Submit</button>
+             <button *ngIf="isOtpButtonClicked" type="button" class="btn btn-primary" (click)="verifyOtpSent()">Submit</button>
         </form>
       </div>
     </div>
@@ -140,5 +128,6 @@
     </ol>
   </div>
 </div>
-
+<!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-circus"
+    [fullScreen]="true"></ngx-spinner> -->
 <app-footer></app-footer>

@@ -1,5 +1,6 @@
 [
       {
+        "id": "111111aa",
         "state": "Andhra Pradesh",
         "type": "Assembly",
         "startDate": "2024-03-15",
@@ -7,6 +8,7 @@
         "status": "upcoming"
       },
       {
+        "id": "222222bb",
         "state": "Assam",
         "type": "Assembly",
         "startDate": "2023-05-27",
@@ -14,6 +16,7 @@
         "status": "recent"
       },
       {
+        "id": "333333cc",
         "state": "Bihar",
         "type": "Assembly",
         "startDate": "2025-10-15",
@@ -21,6 +24,7 @@
         "status": "upcoming"
       },
       {
+        "id": "444444dd",
         "state": "Chhattisgarh",
         "type": "Assembly",
         "startDate": "2023-10-15",
@@ -28,6 +32,7 @@
         "status": "upcoming"
       },
       {
+        "id": "555555ee",
         "state": "Goa",
         "type": "Assembly",
         "startDate": "2023-04-14",
@@ -35,6 +40,7 @@
         "status": "recent"
       },
       {
+        "id": "666666ff",
         "state": "Gujarat",
         "type": "Assembly",
         "startDate": "2025-12-01",
@@ -42,6 +48,7 @@
         "status": "upcoming"
       },
       {
+        "id": "777777gg",
         "state": "Haryana",
         "type": "Assembly",
         "startDate": "2024-6-15",
@@ -50,6 +57,7 @@
       },
  
       {
+        "id": "888888hh",
         "state": "Himachal Pradesh",
         "type": "Assembly",
         "startDate": "2022-11-15",
@@ -57,6 +65,7 @@
         "status": "upcoming"
       },
       {
+        "id": "999999ii",
         "state": "Jharkhand",
         "type": "Assembly",
         "startDate": "2024-10-15",
@@ -64,6 +73,7 @@
         "status": "upcoming"
       },
       {
+        "id": "111111jj",
         "state": "Karnataka",
         "type": "Assembly",
         "startDate": "2023-05-01",
@@ -71,6 +81,7 @@
         "status": "upcoming"
       },
       {
+        "id": "222222kk",
         "state": "Kerala",
         "type": "Assembly",
         "startDate": "2023-04-01",
@@ -78,6 +89,7 @@
         "status": "recent"
       },
       {
+        "id": "333333ll",
         "state": "Madhya Pradesh",
         "type": "Assembly",
         "startDate": "2023-10-15",
@@ -85,6 +97,7 @@
         "status": "upcoming"
       },
       {
+        "id": "444444mm",
         "state": "Maharashtra",
         "type": "Assembly",
         "startDate": "2024-10-01",
@@ -92,6 +105,7 @@
         "status": "upcoming"
       },
       {
+        "id": "555555nn",
         "state": "Manipur",
         "type": "Assembly",
         "startDate": "2022-02-01",
@@ -99,6 +113,7 @@
         "status": "recent"
       },
       {
+        "id": "666666oo",
         "state": "Tamil Nadu",
         "type": "Local Body",
         "startDate": "2022-10-15",
@@ -106,6 +121,7 @@
         "status": "recent"
       },
       {
+        "id": "777777pp",
         "state": "Kerala",
         "type": "Panchayat",
         "startDate": "2024-12-01",

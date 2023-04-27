@@ -12,19 +12,25 @@ export class HomeService {
   constructor(private http:HttpClient) { }
 
   public getParties(){
-    const url="http://43.205.191.47:4000/api/v1/vote";
+    const url="http://15.206.28.41:4000/api/v1/votes";
     return this.http.get<any>(url);
   }
 
   public selectedVote(vote:any){
-    const url=" ";
+    const url="http://15.206.28.41:4000/api/v1/vote";
     return this.http.post<any>(url, vote);
   }
 
 
-  public allElectionsData(){
-    const url="http://43.205.191.47:4000/api/v1/viewElection";
+  public allElectionsData(userState: any){
+    const url="http://15.206.28.41:4000/api/v1/viewElection?search=${userState}";
     return this.http.get<any>(url);
+  }
+
+  
+  public verifyVoterId(verifyVoter){
+    const url="http://15.206.28.41:4000/api/v1/verifyid";
+    return this.http.post<any>(url, verifyVoter);
   }
 
 
@@ -37,5 +43,4 @@ export class HomeService {
       }
     });
   }
- 
 }

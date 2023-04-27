@@ -53,7 +53,7 @@
                                     <!-- Voter ID -->
                                     <div class="col-md-6">
                                         <label class="form-label">Voter ID</label>
-                                        <p>{{profileData._id}}</p>
+                                        <p>{{profileData.voter_id}}</p>
                                     </div>
                                     <!-- Election date-->
                                     <div class="col-md-6">
@@ -61,8 +61,8 @@
                                         <!-- <p></p> -->
                                     </div>
                                     <div class="btns">
-                                    <div class="vote"><button type="submit" class="btn btn-primary mb-2" 
-                                        routerLink="/vote" (click)="getCandidates()">Click to Vote</button></div>
+                                    <!-- <div class="vote"><button type="submit" class="btn btn-primary mb-2"  -->
+                                        <!-- routerLink="/vote" (click)="getCandidates()">Click to Vote</button></div> -->
                                      <!-- <div class="logout"><button type="submit" class="btn btn-primary" routerLink="/home" (click)="logout()">Logout</button></div> -->
                                     <div class="logout">
                                         <button type="submit" class="btn btn-primary" (click)="openConfirmationDialogEdit()">Logout</button>

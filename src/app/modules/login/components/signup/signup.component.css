@@ -149,7 +149,7 @@ label{
   }
   .signform{
     margin: 10px;
-    padding: 10px;
+    /* padding: 10px; */
   }
   .signform input{
     width: 350px;

@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   public otpForm!: FormGroup;      //otpform
   // isOtpEnabled: boolean;
   displayStyle = "none"
+  authority: any;
 
 
   constructor(
@@ -36,20 +37,15 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formbuilder.group({
       email: ['', [Validators.required]],
       password: ['', [Validators.required],],
-      // otp:['',[Validators.maxLength(6),Validators.minLength(6),Validators.required],]
     })
     this.otpForm = this.formbuilder.group({
       otp: ['', [Validators.required, Validators.minLength(6)]],
     })
-
-
   }
-
 
   routeToHome() {
     this._router.navigate(['']);
   }
-
 
   login() {
     this.SpinnerService.show(); 
@@ -73,31 +69,40 @@ export class LoginComponent implements OnInit {
   verify() {
     this.SpinnerService.show(); 
     this.loginservice.verifyOtp(this.otpForm.value).subscribe((res) => {
-      if (res) {
-        localStorage.setItem('token', res.token);
+    if (res) {
         console.log(res.token);
+        localStorage.setItem('token', res.token);
         this.loginservice.getData().subscribe(res => {
           if (res) {
             console.log(res);
             localStorage.setItem('userData', JSON.stringify(res));
+            if(res.data.is_Admin){
+              this.routeToDashboard();
+              this.snackBar.open("LoggedIn Successfully", 'Close', {
+                duration: 2000,
+              });
+            }
+            else{
+              this._router.navigate(['']);
+            }
+ 
           }
         });
         this.snackBar.open("LoggedIn Successfully, You can check your Voter ID in your profile.", 'Close', {
           duration: 2000,
         });
-        this._router.navigate(['']);
+        // this._router.navigate(['']);
       }
     },(err)=>{
       this.snackBar.open("Invalid OTP", 'Close', {
         duration: 2000,
       });
-      // this.toast.error("Invalid OTP", 'error');
     }
     );
   }
-
-
-
+  routeToDashboard() {
+    this._router.navigate(['/dashboard']);
+  }
 }
 
 

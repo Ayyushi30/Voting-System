@@ -3,13 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../login.service';
-// import { SocialAuthService } from '@abacritt/angularx-social-login/socialauth.service';
-// import { GoogleLoginProvider } from '@abacritt/angularx-social-login/providers/google-login-provider';
 import { GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { ToastrService } from 'ngx-toastr';
 import { MatSnackBar } from '@angular/material/snack-bar';
-// import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-// import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-signup',
@@ -30,6 +26,7 @@ export class SignupComponent implements OnInit {
     this.signupForm = this.formBuilder.group({
       name: ['',[Validators.required]],
       email: ['',[Validators.required, Validators.email]],
+      voter_id: ['',[Validators.required]],
       phone: ['',[Validators.maxLength(10),Validators.minLength(10),Validators.required]],
       age: ['',[Validators.required]],
       gender: ['',[Validators.required]],
@@ -56,9 +53,7 @@ export class SignupComponent implements OnInit {
       }, (err) => { 
         const errorFromServer= err.error.error;
         this.snackBar.open(errorFromServer,'Close', {
-          duration: 2000, });
-        
-
+          duration: 2000, });    
       }
       );
      

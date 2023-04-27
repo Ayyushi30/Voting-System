@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<div class="container1">
+    <header class="header" style="background-color:#E4DCCF ;">
+        <h2 style="color: black; font-weight: bold; font-size: 40px;">Secure E-voting System</h2>
+        <button class="btn btn-primary"  (click)="openConfirmationDialogEdit()">Logout</button>
+    </header>
+    <div class="dashboard">
+        <h1>DASHBOARD</h1>
+    </div>
+    <div class="results-container" >
+        <div class="results-heading" style="height: 50px;">
+            <h2 style="font-weight: bolder;">Results of the Elections are here.</h2>
+        </div>
+        <div class="result-cards" style="margin-top: 20px;" style="display: flex; justify-content: space-around;">
+            <div class="card" *ngFor="let r of result">
+                <div class="card-body">
+                    <h5 class="card-title">Party Name: {{r.party_name}}</h5>
+                    <p class="card-text" (click)="route()">Total Number of Votes:{{r.votes}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

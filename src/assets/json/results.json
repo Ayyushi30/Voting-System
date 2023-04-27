@@ -1,0 +1,29 @@
+[  {    "party_name": "AAP",   
+        "candidate_name": "Arvind kejriwal",   
+        "votes": 1200  
+    },  
+
+   {    "party_name": "BJP",    
+        "candidate_name": "Guatam Gambhir",    
+        "votes": 800  
+    }, 
+
+    {    "party_name": "BSP",    
+         "candidate_name": "Mayawati",    
+         "votes": 1500  
+    }, 
+         
+    {    "party_name": "CONGRESS",    
+         "candidate_name": "Rahul Gandhi",    
+         "votes": 700  
+    },  
+
+    {    "party_name": "NCP", 
+         "candidate_name": "Sharad pawar",
+         "votes": 900  
+    }, 
+
+   {    "party_name": "CPI",
+        "candidate_name": "Jyoti Basu",
+        "votes": 1100  
+    }]

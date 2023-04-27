@@ -136,7 +136,15 @@
                     <input formControlName="email" type="email" class="ng-touched ng-invalid" class="form-control"
                       id="exampleInputEmail1" placeholder="Enter Your Email">
                     <!-- <div> <button type="submit" style="margin-left: 10px;" class="btn btn-success mb-2">Verify Your -->
-                        <!-- Email</button></div> -->
+                    <!-- Email</button></div> -->
+                  </div>
+                  <div class="form-group" style="display: flex;">
+                    <label for="voter_id" class="form-label">Voter Id:</label>
+                    <input formControlName="voter_id" type="text" class="ng-touched ng-invalid" class="form-control"
+                      id="exampleInputPassword1" placeholder="Enter Your Voter ID">
+                    <div><span style="color: red;"
+                        *ngIf="!signupForm.get('voter_id').valid && signupForm.get('voter_id').touched">This field is
+                        required.</span> </div>
                   </div>
                   <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
                     <div class="modal-dialog" role="document">
@@ -149,7 +157,7 @@
                             <div class="form-group">
                               <label for="otp">OTP:</label>
                               <input type="text" class="form-control" id="otp" formControlName="otp">
-                              
+
                             </div>
                             <div class="modal-footer">
                               <button type="submit" class="btn btn-danger" [disabled]="!otpVerifyForm.valid">
@@ -177,7 +185,7 @@
                     </select>
                   </div>
                   <div class="form-group" style="display: flex;">
-                    <label for="Region" class="form-label">Region:</label>
+                    <label for="State" class="form-label">State:</label>
                     <input formControlName="area" type="text" class="form-control" id="exampleInputPassword1"
                       placeholder="Enter Your Region">
                   </div>

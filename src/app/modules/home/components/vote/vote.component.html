@@ -15,7 +15,7 @@
         <div class="card-body">
           <h5 class="card-title">Party Name: {{p.party_name}}</h5>
           <p class="card-title">Candidate Name: {{p.candidate_name}}</p>
-          <button class="btn btn-primary" (click)="openConfirmationDialogEdit()">Vote Now</button>
+          <button class="btn btn-primary" (click)="openConfirmationDialogEdit(p._id,p.voter_id)">Vote Now</button>
         </div>
       </div>
 
